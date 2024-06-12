@@ -13,6 +13,10 @@
   }
 }
 
+.background {
+  background-image: url('/public/chat\ bg.png');
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -43,10 +47,10 @@
   padding-top: 5%;
   padding-bottom: 5%;
   padding-right: 6%; */
-  padding-top: 10%;
-  padding-bottom: 10%;
-  padding-right: 15%;
-  padding-left: 15%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-radius: 5px;
   background-color: rgb(211, 211, 211);
   color:#282c34;
@@ -80,11 +84,13 @@
 }
 .Nav {
   height: 10vh;
+  /* width: 100vw !important; */
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
   align-items: center;
   gap: 5%;
   /* position: fixed; */
@@ -140,13 +146,18 @@
   overflow: hidden;
   position: relative;
   margin: none; padding: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 .Heading p {
   z-index: 1;
   margin: 0;
-  font-size: xx-large;
+  /* font-size: xx-large; */
+  font-size: 3vw;
   font-weight: 900;
-  text-align: center;
+  /* text-align: center; */
   position: relative;
 }
 .Heading video {

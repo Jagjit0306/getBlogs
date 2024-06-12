@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <Nav/>
-
-        <Outlet/>
-
+        <div className='background'>
+          <Outlet/>
+        </div>
       <Footer/>
     </>
   );
