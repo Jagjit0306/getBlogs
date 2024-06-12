@@ -25,7 +25,7 @@ function Nav(props) {
         <NavHeading name='getBlogs'/>
         <NavButton link='/' name='Home'/>
         {/* <NavButton link='/' name='Explore'/> */}
-        <NavButton link='https://www.github.com/Jagjit0306' name='Help'/>
+        <NavButton link='https://www.github.com/Jagjit0306/getBlogs' name='Help'/>
         <MainButton link='/new' name="New"/>
       </div>
     )
@@ -56,7 +56,7 @@ function NavMobMenu() {
         <div className='NavMobMenu'>
             <NavButton link='/' name='Home'/>
             {/* <NavButton link='/' name='Explore'/> */}
-            <NavButton link='https://www.github.com/Jagjit0306' name='Help'/>
+            <NavButton link='https://www.github.com/Jagjit0306/getBlogs' name='Help'/>
             <MainButton link='/new' name="New"/>
         </div>
     )

@@ -16,7 +16,7 @@ function Blog(props) {
           {(props.b.Name)?'by':''} {props.b.Name}
         </div>
         <div className='BlogContent'>
-          {contentPreview}
+          {contentPreview}{(props.b.Name)?'........':''}
         </div>
         {/* <Link to={'/blog?id='+props.b._id}>
           Read More...
