@@ -37,9 +37,10 @@ function BlogForm() {
             </label>
             <label>
                 BLOG content<br/>
-                <textarea rows='15' cols='100' value={textarea} onChange={handleChange0} />
+                {/* <textarea rows='15' cols='100' value={textarea} onChange={handleChange0} /> */}
+                <textarea id={'textarea'} value={textarea} onChange={handleChange0} />
             </label>
-            <input type='submit' onClick={handleSubmit}/>
+            <input type='submit' className='NavButton' onClick={handleSubmit}/>
         </form>
     )
 }

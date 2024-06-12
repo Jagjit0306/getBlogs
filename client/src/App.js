@@ -1,14 +1,23 @@
 import './App.css';
-import {Nav, Footer} from './components.js'
+import {Nav, NavMob, Footer, NavMobMenu} from './components.js'
 import { Outlet, Link } from "react-router-dom";
+import {useState} from 'react'
 
 function App() {
+  
+  let [menuOpen, setMenuOpen] = useState(false)
   return (
     <>
       <Nav/>
-        <div className='background'>
-          <Outlet/>
-        </div>
+      <NavMob toggle={()=>{setMenuOpen(!menuOpen)}}/>
+
+      {(menuOpen)?(
+        <NavMobMenu/>
+      ):('')}
+
+      <div className='background'>
+        <Outlet/>
+      </div>
       <Footer/>
     </>
   );

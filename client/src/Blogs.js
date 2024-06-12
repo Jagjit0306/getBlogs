@@ -1,4 +1,4 @@
-import {Heading} from './components.js'
+import {Heading, MainButton, NavButton} from './components.js'
 import React, {useState, useEffect} from 'react'
 import {Link } from "react-router-dom";
 
@@ -18,7 +18,11 @@ function Blog(props) {
         <div className='BlogContent'>
           {contentPreview}
         </div>
-        <Link to={'/blog?id='+props.b._id}>Read More...</Link>
+        {/* <Link to={'/blog?id='+props.b._id}>
+          Read More...
+        </Link> */}
+        <br/>
+        <MainButton name={'Read'} dark={true} link = {'/blog?id='+props.b._id} />
       </div>
     )
 }
@@ -34,8 +38,8 @@ function Blogs(props) {
         {/* <ButtonPanel/> */}
         <Heading name='E X P L O R E'/>
         <div className='Blogs'>
-          {backendData.map((blog)=>{
-            return <Blog b={blog}/>
+          {backendData.map((blog, i)=>{
+            return <Blog key={i} b={blog}/>
           })}
         </div>
       </>

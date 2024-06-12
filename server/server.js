@@ -11,7 +11,13 @@ const app = express()
 dotenv.config()
 mongoose.connect(process.env.DBKey1)
 
+const corsOptions = {
+  origin: 'https://getBlogs.onrender.com',
+  optionsSuccessStatus: 200
+}
+
 app.use(cors())
+// app.use(cors(corsOptions)) //uncomment this to enable origin in cors
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 

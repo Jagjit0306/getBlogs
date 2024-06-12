@@ -24,19 +24,53 @@ function Nav(props) {
       <div className='Nav'>
         <NavHeading name='getBlogs'/>
         <NavButton link='/' name='Home'/>
-        <NavButton link='/' name='Explore'/>
+        {/* <NavButton link='/' name='Explore'/> */}
         <NavButton link='https://www.github.com/Jagjit0306' name='Help'/>
         <MainButton link='/new' name="New"/>
       </div>
     )
 }
+
+function NavMob(props) {
+    return (
+        <div className='NavMob Nav'>
+            {/* <p>letss goo boys,we navigating with this one 🗣️🗣️🗣️🗣️</p> */}
+            <NavHeading name='getBlogs'/>
+            <NavMenuButton toggle={props.toggle}/>
+        </div>
+    )
+}
+
+function NavMenuButton(props) {
+    return (
+        <>
+            <div onClick={props.toggle} className='NavMenuButton'>
+                <Icon_ name='Menu'/>
+            </div>
+        </>
+    )
+}
+
+function NavMobMenu() {
+    return (
+        <div className='NavMobMenu'>
+            <NavButton link='/' name='Home'/>
+            {/* <NavButton link='/' name='Explore'/> */}
+            <NavButton link='https://www.github.com/Jagjit0306' name='Help'/>
+            <MainButton link='/new' name="New"/>
+        </div>
+    )
+}
   
 function Icon_(props){
     const iconsrc = {
-      'New':'/create-pen.png'
+      'New':['/create-pen.png', '1em'],
+      'Menu': ['/menuButton.png', '17vw'],
+      'Delete': ['/trash.png', '1em'],
+      'Read': ['/plus.png', '1em']
     }
     return(
-      <img src={iconsrc[props.name]} style={{height:'1em'}}/>
+      <img src={iconsrc[props.name][0]} style={{height:iconsrc[props.name][1]}}/>
     )
 }
   
@@ -90,4 +124,4 @@ function Footer() {
     )
 }
 
-export {Nav, Footer, Heading, MainButton}
+export {Nav, NavMob, Footer, Heading, MainButton, NavButton, NavMobMenu}

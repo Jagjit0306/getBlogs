@@ -85,8 +85,8 @@
 .Nav {
   height: 10vh;
   /* width: 100vw !important; */
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
@@ -98,6 +98,56 @@
   top:0;
   z-index: 5;
 }
+.NavMob {
+  display: none;
+}
+.NavMenuButton {
+  /* background-color: rgba(255, 255, 255, 0.901); */
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 17vw;
+  width: 17vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NavMobMenu {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.7);  
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  position:sticky;
+  top:12.17vh;
+  z-index: 4;
+  animation: NavMobMenuAnim 0.5s ease-out forwards;
+}
+@keyframes NavMobMenuAnim {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0%;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 100%;
+  }
+}
+/* .NavMenuButtonAnim1 {
+  animation: NavMenuButtonAnim forwards 1s ease-out;
+}
+.NavMenuButtonAnim2 {
+  animation: NavMenuButtonAnim reverse forwards 1s ease-out;
+}
+
+@keyframes NavMenuButtonAnim {
+  100% {
+    transform: rotateX('90');
+  }
+} */
+
 .ButtonPanel {
   /* margin-top: 20px;
   margin-bottom: 20px; */
@@ -119,24 +169,26 @@
   justify-content: space-evenly;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-decoration: none;
+  text-wrap: nowrap;
 }
-
+      
 .button {
   cursor: pointer;
   user-select: none;
 }
-
+        
 .button:hover {
   animation: Hover 0.3s ease-in forwards;
 }
 
 .noAnim:hover {
   animation: none !important;
+  cursor: default;
 }
 
 @keyframes Hover {
   100% {
-    transform: scale(1.1)
+   transform: scale(1.1)
   }
 }
 
@@ -150,7 +202,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 .Heading p {
   z-index: 1;
   margin: 0;
@@ -210,6 +262,10 @@
   align-items: center;
   justify-content: space-evenly;
 }
+#textarea {
+  width: 70vw;
+  height: 40vh;
+}
 .BlogForm label {
   font-size: medium;
   font-weight: 500;
@@ -217,7 +273,7 @@
 }
 .Blog:hover {
   animation: Hover 0.3s ease-in forwards;
-}
+  }
 .BlogName {
   color: rgba(0, 11, 69, 0.7);
   font-size: x-large;
@@ -226,10 +282,36 @@
 }
 .BlogContent {
   font-weight: 500;
-}
+  }
 .BlogAuthor {
   font-weight: 700;
   font-size: small;
   text-align: end;
   color: #282c34;
+}
+                              
+@media screen and (max-width: 800px) {
+  .Nav {
+    display: none;
+  }
+  .NavMobMenu {
+    display: flex;
+  }
+  .NavHeading {
+    font-size: 12vw !important;
+  }
+  .NavMob {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Heading {
+    display: block;
+    
+  }
+  .Heading p {
+    font-size: 10vw;
+    text-align: center;
+  }
 }

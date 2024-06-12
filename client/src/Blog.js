@@ -1,5 +1,5 @@
 import {Heading, MainButton} from './components'
-import { useSearchParams, Redirect} from 'react-router-dom'; 
+import { useSearchParams} from 'react-router-dom'; 
 import { useState, useEffect } from 'react';
 
 function Blog() {
@@ -33,11 +33,14 @@ function Blog() {
                 <div className='BlogName'>{datab?('by '+datab.Name):('Loading....')}</div>
                 <div className='Blog noAnim'>
                     <p className='BlogContent'>{(datab)?(datab.Content):('Content Loading...')}</p>
+
                     {(datab)?(
-                    <div onClick={deleteEntry}>
-                        <MainButton link={'/'} dark={true} name='Delete'/>
-                    </div>
-                    ):(<></>)}
+                        <div onClick={deleteEntry}>
+                            <MainButton link={'/'} dark={true} name='Delete'/>
+                        </div>
+                    ):(
+                        <p>Loading...</p>
+                    )}
                 </div>
             </div>
         </>
