@@ -7,7 +7,7 @@ function Blog() {
 
     const [datab, setDatab] = useState('')
     useEffect(()=>{
-        fetch('https://getblogs.onrender.com/api').then(responses=>responses.json()).then((data)=>{
+        fetch('https://getblogs-b.onrender.com/api').then(responses=>responses.json()).then((data)=>{
             // setDatab(data)
             for (let i = 0; i < data.length; i++)
                 if(data[i]._id == searchParams.get('id')) setDatab(data[i])
@@ -19,7 +19,7 @@ function Blog() {
     }
 
     function deleteEntry(){
-        fetch('https://getblogs.onrender.com/del', 
+        fetch('https://getblogs-b.onrender.com/del', 
             {method: 'POST', // or 'PUT'
             headers: { 'Content-Type': 'application/json',},
             body: JSON.stringify(delBlog),

@@ -27,7 +27,7 @@ function Blogs(props) {
     const [backendData, setBackend] = useState([{}])
   
     useEffect(()=>{
-      fetch('https://getblogs.onrender.com/api').then(response=>response.json()).then(data=> {setBackend(data)})})
+      fetch('https://getblogs-b.onrender.com/api').then(response=>response.json()).then(data=> {setBackend(data)})})
   
     return (
       <>

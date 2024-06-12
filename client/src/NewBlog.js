@@ -17,7 +17,7 @@ function BlogForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = {...bInput, textarea}
-        fetch('https://getblogs.onrender.com/new', 
+        fetch('https://getblogs-b.onrender.com/new', 
             {method: 'POST', // or 'PUT'
             headers: { 'Content-Type': 'application/json',},
             body: JSON.stringify(formData),
