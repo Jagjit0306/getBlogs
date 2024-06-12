@@ -119,7 +119,7 @@ function Heading(props) {
 function Footer() {
     return (
       <div className='Footer'>
-        getBlogs®
+        © 2024 getBlogs
       </div>
     )
 }

@@ -13,7 +13,7 @@ function Blog(props) {
           {props.b.Heading}
         </div>
         <div className='BlogAuthor'>
-          by {props.b.Name}
+          {(props.b.Name)?'by':''} {props.b.Name}
         </div>
         <div className='BlogContent'>
           {contentPreview}
@@ -27,8 +27,12 @@ function Blog(props) {
     )
 }
 
-function Blogs(props) {
-    const [backendData, setBackend] = useState([{}])
+function Blogs() {
+    const [backendData, setBackend] = useState([{
+      Heading: 'Loading...',
+      // Name: 'Loading...',
+      // Content: "Loading..."
+    }])
   
     useEffect(()=>{
       fetch('https://getblogs-b.onrender.com/api').then(response=>response.json()).then(data=> {setBackend(data)})})

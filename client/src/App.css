@@ -244,7 +244,8 @@
   background-clip: content-box; */
 }
 .Blog {
-  background-color: #c2efff;
+  background-color: #cff2ff;
+  /* background-color: #c2efff; */
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -285,8 +286,8 @@
   }
 .BlogAuthor {
   font-weight: 700;
-  font-size: small;
-  text-align: end;
+  font-size: medium;
+  padding-left:20vw;
   color: #282c34;
 }
                               
