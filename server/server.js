@@ -44,6 +44,10 @@ app.post('/new', async function (req, res) {
   else console.log('An Error has been encountered while uploading Blog...')
 })
 
+app.get('/', (req, res)=>{
+  res.redirect('/api')
+})
+
 app.post('/del', async function (req, res) {
   console.log('request to delete blog recieved')
   console.log(req.body.id)

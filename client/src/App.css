@@ -60,17 +60,6 @@
   text-decoration: none;
   text-align: center;
 }
-.NavButton:hover {
-  animation: NavButtonAnim 3s forwards ease-in-out;
-}
-@keyframes NavButtonAnim {
-  50% {
-    background-color: black !important;
-  }
-  100% {
-    background-color: rgb(211, 211, 211) !important;
-  }
-}
 .NavHeading {
   font-size: 4vw;
   color: rgb(211,211,211);
@@ -135,18 +124,6 @@
       opacity: 100%;
   }
 }
-/* .NavMenuButtonAnim1 {
-  animation: NavMenuButtonAnim forwards 1s ease-out;
-}
-.NavMenuButtonAnim2 {
-  animation: NavMenuButtonAnim reverse forwards 1s ease-out;
-}
-
-@keyframes NavMenuButtonAnim {
-  100% {
-    transform: rotateX('90');
-  }
-} */
 
 .ButtonPanel {
   /* margin-top: 20px;
@@ -188,7 +165,7 @@
 
 @keyframes Hover {
   100% {
-   transform: scale(1.1)
+   transform: scale(1.1);
   }
 }
 
